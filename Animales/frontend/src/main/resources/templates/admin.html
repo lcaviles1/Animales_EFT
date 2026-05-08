@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel privado</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header class="header">
+    <div>
+        <h1>Panel privado</h1>
+        <p>Zona restringida para gestión y administración</p>
+    </div>
+    <nav>
+        <a th:href="@{/}">Inicio</a>
+        <form th:action="@{/logout}" method="post" style="display:inline;">
+            <button type="submit">Cerrar sesión</button>
+        </form>
+    </nav>
+</header>
+
+<section class="panel">
+    <a class="panel-card" th:href="@{/admin/agregar}">Agregar mascota</a>
+    <a class="panel-card" th:href="@{/admin/editar}">Editar mascota</a>
+    <a class="panel-card" th:href="@{/admin/eliminar}">Eliminar mascota</a>
+</section>
+</body>
+</html>

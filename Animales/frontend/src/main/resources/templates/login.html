@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body class="auth-page">
+<div class="auth-box">
+    <h1>Ingreso privado</h1>
+    <p>Usa uno de los usuarios habilitados para acceder a las páginas privadas.</p>
+
+    <form th:action="@{/login}" method="post" class="login-form">
+        <input type="text" name="username" placeholder="Usuario" required>
+        <input type="password" name="password" placeholder="Clave" required>
+        <button type="submit">Ingresar</button>
+    </form>
+
+    <div class="credenciales">
+        <h3>Usuarios válidos</h3>
+        <p><strong>admin</strong> / Admin123</p>
+        <p><strong>gestor</strong> / Gestor123</p>
+        <p><strong>voluntario</strong> / Voluntario123</p>
+    </div>
+
+    <a th:href="@{/}" class="volver">Volver al catálogo</a>
+</div>
+</body>
+</html>
